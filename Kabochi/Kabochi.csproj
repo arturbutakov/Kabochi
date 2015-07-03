@@ -46,8 +46,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bullet.cs" />
     <Compile Include="Core\Layer.cs" />
-    <Compile Include="Core\Stats.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="Core\ObjectManager.cs" />
     <Compile Include="Core\View.cs" />

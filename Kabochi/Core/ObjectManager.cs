@@ -68,7 +68,13 @@ namespace Kabochi.Core
 
         public void removeObject(GameObject obj)
         {
+
             if (obj.drawable)
+            {
+                (_Layers.Find(x => x.depth == ((DrawableObject)obj).depth)).objects.Remove((DrawableObject)obj);
+            }
+
+           // if (obj.drawable)
                 //_drawObjects.Remove((DrawableObject)obj);
             if (obj.movable)
                 _movableObjects.Remove((DrawableObject)obj);
@@ -102,6 +108,9 @@ namespace Kabochi.Core
             if (obj.drawable)
             {
                 getLayer(depth).objects.Add((DrawableObject)obj);
+
+                ((DrawableObject)obj).depth = (int)depth;
+
                 //_drawObjects.Add((DrawableObject)obj);
                 //_drawObjects.AddBinary(obj);
                 //needSomeSort = true;
@@ -133,6 +142,12 @@ namespace Kabochi.Core
         public SnowFlake addSnowFlake(float x, float y, float scale)
         {
             SnowFlake obj = new SnowFlake(x, y, scale);
+            addObject(obj, -5);
+            return obj;
+        }
+        public Bullet addBullet(float x, float y, float scale)
+        {
+            Bullet obj = new Bullet (x, y, scale);
             addObject(obj, -5);
             return obj;
         }

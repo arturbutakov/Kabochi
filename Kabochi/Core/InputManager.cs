@@ -42,11 +42,13 @@ namespace Kabochi
             void gameForm_MouseDown(object sender, MouseEventArgs e)
             {
                 
+                
                 if (e.Button == MouseButtons.Middle)
                 {
                     middleButtonIsPressed = true;
                     oldPosition = Cursor.Position;
                 }
+                 
                     
             }
             public bool keyIsPressed(string keyString)
@@ -101,6 +103,12 @@ namespace Kabochi
 
                         }
                         break;
+                    case Keys.B:
+                        lock (game.drawManager.grafx)
+                        {
+                            game.objectManager.addBullet((float)game.gameLogic.hero.position.X, (float)game.gameLogic.hero.position.Y, 1.0f);
+                        }
+                        break;
                     case Keys.Left:
                         lock (game.drawManager.grafx)
                         {
@@ -145,6 +153,7 @@ namespace Kabochi
             }
             public void gameForm_MouseClick(object sender, MouseEventArgs e)
             {
+                /*
                 if (e.Button==MouseButtons.Left)
                 {
                     SnowFlake a = game.objectManager.addSnowFlake(game.drawManager.view.x + e.X, game.drawManager.view.y + e.Y , (float)(5+game.gameLogic.random.NextDouble()*12));
@@ -166,6 +175,7 @@ namespace Kabochi
                     //game.gameLogic.objects.Add(a);
                 }
                 Console.WriteLine(e.Button+" click on "+e.X+" "+e.Y);
+                 */
             }
         }
     }

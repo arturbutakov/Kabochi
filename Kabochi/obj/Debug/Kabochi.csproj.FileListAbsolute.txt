@@ -49,3 +49,15 @@ E:\Загрузки\Kabochi(1)\Kabochi\Kabochi\obj\Debug\Kabochi.csprojResolveAs
 E:\Загрузки\Kabochi-master(3)\Kabochi-master\Kabochi\bin\Debug\Kabochi.exe.config
 E:\Загрузки\Kabochi-master(3)\Kabochi-master\Kabochi\obj\Debug\Kabochi.exe
 E:\Загрузки\Kabochi-master(3)\Kabochi-master\Kabochi\obj\Debug\Kabochi.pdb
+D:\ДВФУ\Учёба ДВФУ\Артур и Марк\2\Kabochi-master\Kabochi\bin\Debug\Kabochi.exe.config
+D:\ДВФУ\Учёба ДВФУ\Артур и Марк\2\Kabochi-master\Kabochi\obj\Debug\Kabochi.exe
+D:\ДВФУ\Учёба ДВФУ\Артур и Марк\2\Kabochi-master\Kabochi\obj\Debug\Kabochi.pdb
+D:\ДВФУ\Учёба ДВФУ\Артур и Марк\2\Kabochi-master\Kabochi\bin\Debug\Kabochi.exe
+D:\ДВФУ\Учёба ДВФУ\Артур и Марк\2\Kabochi-master\Kabochi\bin\Debug\Kabochi.pdb
+D:\ДВФУ\Учёба ДВФУ\Артур и Марк\2\Kabochi-master\Kabochi\obj\Debug\Kabochi.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Kabochi-master343233\Kabochi-master\Kabochi\bin\Debug\Kabochi.exe.config
+C:\Users\User\Desktop\Kabochi-master343233\Kabochi-master\Kabochi\obj\Debug\Kabochi.exe
+C:\Users\User\Desktop\Kabochi-master343233\Kabochi-master\Kabochi\obj\Debug\Kabochi.pdb
+C:\Users\User\Desktop\Kabochi-master343233\Kabochi-master\Kabochi\bin\Debug\Kabochi.exe
+C:\Users\User\Desktop\Kabochi-master343233\Kabochi-master\Kabochi\bin\Debug\Kabochi.pdb
+C:\Users\User\Desktop\Kabochi-master343233\Kabochi-master\Kabochi\obj\Debug\Kabochi.csprojResolveAssemblyReference.cache

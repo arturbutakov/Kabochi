@@ -14,13 +14,15 @@ namespace Kabochi
         public SnowFlake(float x_m, float y_m, float scale_m)
         {
             drawable = true;
+            solid = true;
             movable = true;
+            delete = false;
             depth = 0;
             _angle = 270;
             _speed = 1.2f;
             CalculateVector();
             position = new System.Windows.Point(x_m, y_m);
-            width = height = scale_m * 5;
+            width = height = scale_m * 10;
             brush = Brushes.Azure;
         }
         override public void Draw(BufferedGraphics grafx, float x, float y)
@@ -31,10 +33,16 @@ namespace Kabochi
         public override void CollisionWith(DrawableObject b)
         {
             //base.CollisionWith(b);
-            //if (b.GetType().Name == "Hero")
-            //{
+            if (b.GetType().Name == "Hero")
+            {
                 this.brush = System.Drawing.Brushes.Red;
-            //}
+                //this.delete = true;
+            }
+            if (b.GetType().Name == "Bullet")
+            {
+                //this.delete = true;
+                this.brush = System.Drawing.Brushes.Red;
+            }
         }
         override public void Update(Core.GameLogic gameLogic)
         {

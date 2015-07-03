@@ -27,6 +27,9 @@ namespace Kabochi.Core
             movableObjects = game.objectManager.movableObjects;
             stageWidth = 3000;
             stageHeight = 3000;
+           // double sss = hero.position.X;
+            
+            //game.objectManager.addBullet((float)hero.position.X, (float)hero.position.Y, 15.0f);
             for (int i = 0; i < 1000; i++)
             {
                 game.objectManager.addSnowFlake((float)(random.NextDouble() * stageWidth), (float)(random.NextDouble() * stageHeight), (float)(0.7+random.NextDouble()*2));
@@ -65,8 +68,7 @@ namespace Kabochi.Core
                     //else if (x.GetType().GetProperty("depth") == null) return 1; 
                     //else if (y.GetType().GetProperty("depth") == null) return -1;
                     //else if (!(typeof(DrawableObject).IsInstanceOfType(x))) return 1;
-                    //else if (!(typeof(DrawableObject).IsInstanceOfType(y))) return -1;
-                 //       DrawableObject dx = (DrawableObject) x;
+                    //else if (!(typeof(DrawableObject).IsInstanceOfType(y))) return -1;  
                  //       DrawableObject dy = (DrawableObject) y;
                  //   if (dx.depth == dy.depth) return 0;
                  //   else if (dx.depth > dy.depth) return -1;
@@ -87,6 +89,21 @@ namespace Kabochi.Core
             {
                 obj.Update(this);
             }
+
+            for (int k = 0; k < objects.Count; )
+            {
+                GameObject obj = objects[k];
+                if (obj.delete == true)
+                {
+                    game.objectManager.removeObject(obj);
+                }
+                else
+                {
+                    k++;
+                }
+                obj.Update(this);
+            }
+
         }
     }
 }

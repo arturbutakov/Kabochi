@@ -8,6 +8,8 @@ namespace Kabochi
 {
     class GameObject
     {
+
+        public bool delete = false;
         public bool drawable=false;
         public bool collidable = false;
         public bool movable = false;

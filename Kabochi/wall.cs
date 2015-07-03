@@ -10,19 +10,32 @@ namespace Kabochi
 {
     class Wall: DrawableObject
     {
-        
-        Brush brush;
+
+        public Brush wallBrush;
         public  Wall(float x_m, float y_m, float scale_m)
         {
             drawable = true;
             solid = true;
-            width = height = scale_m * 32;
+            movable = true;
+            collidable = true;
+            delete = false;
             position = new System.Windows.Point(x_m, y_m);
-            brush = Brushes.Red;
+            width = height = scale_m * 32;
+            wallBrush = Brushes.Green;
+
         }
         public override void Draw(BufferedGraphics grafx, float x, float y)
         {
-            grafx.Graphics.FillRectangle(this.brush, x, y, width, height);
+            grafx.Graphics.FillRectangle(this.wallBrush, x, y, width, height);
+        }
+        public override void CollisionWith(DrawableObject b)
+        {
+            //base.CollisionWith(b);
+            if (b.GetType().Name == "Bullet")
+            {
+                this.delete = true;
+                //this.bulletBrush = System.Drawing.Brushes.Red;
+            }
         }
     }
 }
